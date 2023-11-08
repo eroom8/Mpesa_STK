@@ -18,7 +18,7 @@ function App() {
 
     try {
       const res = await toast.promise(
-        axios.post('http://localhost:5000/stk', formData),
+        axios.post('https://react-mpesa.onrender.com/stk', formData),
         {
           pending: 'Payment is processing',
           success: 'complete stk  👌',
