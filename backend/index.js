@@ -3,7 +3,8 @@ const cors = require('cors');
 const app = express();
 const stkRouter = require('./routes/stk'); 
 require('dotenv').config();
-const port = process.env.LOCAL_PORT;
+const port = process.env.PORT;
+
 
 
 // Configure CORS
