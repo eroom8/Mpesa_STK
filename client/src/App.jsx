@@ -18,11 +18,11 @@ function App() {
 
     try {
       const res = await toast.promise(
-        axios.post('https://react-mpesa.onrender.com/stk', formData),
+        axios.post('https://react-mpesa.onrender.com/', formData),
         {
-          pending: 'Payment is processing',
-          success: 'complete stk  👌',
-          error: 'Payment failed 🤯',
+          pending: 'Payment is processing 🤚',
+          success: 'complete stk  🤑',
+          error: 'Payment failed 😟',
         }
       );
 
@@ -41,14 +41,14 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-screen">
-        <form className="bg-green-100 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-96 h-auto">
-          <div className="flex items">
-            <h2 className="text-2xl text-green-800 font-bold mb-4 text-center">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-green-300">
+        <form className="bg-green-100 shadow-md rounded px-8 pt-6 pb-8 mb-4 sm:w-96 w-full">
+          <div className="flex items-center mb-4">
+            <h2 className="text-2xl text-green-800 font-bold text-center flex " >
               MPESA-Pay
             </h2>
             <img
-              className="rounded-full w-18 h-12"
+              className="rounded-full w-20 h-15 ml-2"
               src="./mpesa-icon.png"
               alt="M-PESA Icon"
             />
@@ -88,7 +88,7 @@ function App() {
           </div>
           <div className="flex items-center justify-center">
             <button
-              className="bg-green-600 hover-bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="button"
               onClick={payHandler}
             >
